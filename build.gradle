@@ -33,4 +33,5 @@ task buildZip(type: Zip) {
 		from configurations.runtimeClasspath
 	}
 	archiveName 'banana-lambda.zip'
+	destinationDir(file('./build'))
 }

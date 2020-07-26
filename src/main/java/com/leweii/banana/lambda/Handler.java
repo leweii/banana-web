@@ -9,7 +9,7 @@ import io.leego.banana.BananaUtils;
 
 import java.util.Map;
 
-// Handler value: example.Handler
+// Handler value: com.leweii.banana.lambda.Handler
 public class Handler implements RequestHandler<Map<String, String>, String> {
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -23,6 +23,7 @@ public class Handler implements RequestHandler<Map<String, String>, String> {
         // process event
         logger.log("EVENT: " + gson.toJson(event));
         logger.log("EVENT TYPE: " + event.getClass().toString());
+        logger.log("Response: \n" + response);
         return response;
     }
 }
