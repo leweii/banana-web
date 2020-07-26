@@ -16,7 +16,7 @@ public class Handler implements RequestHandler<Map<String, String>, String> {
     @Override
     public String handleRequest(Map<String, String> event, Context context) {
         LambdaLogger logger = context.getLogger();
-        String response = BananaUtils.bananaify(event.get("text"), event.getOrDefault("fount", "ANSI_Shadow"));
+        String response = BananaUtils.bananaify(event.get("text"), event.getOrDefault("font", "ANSI_Shadow"));
         // log execution details
         logger.log("ENVIRONMENT VARIABLES: " + gson.toJson(System.getenv()));
         logger.log("CONTEXT: " + gson.toJson(context));
